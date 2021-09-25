@@ -95,7 +95,6 @@ def returned_token_1(pair_contract, token0_amount, exchange_fee, token0_decimals
 
 # Get the amount of token0 given a set amount of token1 - i.e. Amount of USDC returned given a set number of ETH tokens.
 # Decimal transfomration takes place inside method
-# Example: 
 def returned_token_0(pair_contract, token1_amount, exchange_fee, token0_decimals, token1_decimals):
     token1_amount_with_decimals = token1_amount * token1_decimals
     reserve_array = pair_contract.functions.getReserves().call()
